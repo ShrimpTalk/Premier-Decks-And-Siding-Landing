@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premier Decks & Siding — Luxury Coastal Builds</title>
+  <meta name="description" content="Luxury decks and siding on North Carolina's coast. Get your free quote today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --teal:#2bb2a8;
+      --blue:#2ea3ff;
+      --green:#34c759;
+      --sand:#e6d5b8;
+      --ink:#0b1a22;
+      --ink-70:rgba(11,26,34,.7);
+      --white:#ffffff;
+      --glass:rgba(255,255,255,.85);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; color:var(--ink);
+      background: linear-gradient(180deg, #f7fbff 0%, #eef7ff 35%, var(--sand) 100%);
+    }
+    .wrap{display:flex; flex-direction:column; min-height:100vh}
+    header{
+      position:sticky; top:0; z-index:10; backdrop-filter:saturate(140%) blur(6px);
+      background:linear-gradient(90deg, rgba(255,255,255,.85), rgba(255,255,255,.75));
+      border-bottom:1px solid rgba(0,0,0,.06);
+    }
+    .container{max-width:1100px; margin:0 auto; padding:16px 20px}
+    .brand{display:flex; align-items:center; gap:14px}
+    .brand img{height:52px; width:auto; object-fit:contain}
+    .brand h1{font-size:1.15rem; margin:0; font-weight:700; letter-spacing:.3px}
+    .tag{font-size:.85rem; color:var(--ink-70); margin:2px 0 0}
+
+    .hero{position:relative; isolation:isolate}
+    .deck-band{
+      position:absolute; inset:auto 0 -120px 0; height:200px; z-index:-1;
+      background: repeating-linear-gradient(90deg, #d9c6a6 0 40px, #ceb894 40px 42px);
+      opacity:.35;
+    }
+    .hero-inner{display:grid; grid-template-columns:1.1fr .9fr; gap:32px; align-items:center; padding:48px 20px 28px}
+    @media (max-width: 880px){ .hero-inner{grid-template-columns:1fr; gap:16px} }
+
+    .logo-card{
+      background:var(--glass); border:1px solid rgba(0,0,0,.06); border-radius:20px; padding:28px;
+      box-shadow:0 10px 30px rgba(0,0,0,.06);
+      display:flex; align-items:center; justify-content:center;
+    }
+    .logo-card img{max-width:360px; width:100%; height:auto}
+
+    .cta{
+      background:linear-gradient(135deg, var(--teal), var(--blue));
+      color:var(--white); border-radius:22px; padding:28px; box-shadow:0 12px 36px rgba(46,163,255,.25);
+    }
+    .cta h2{margin:0 0 8px; font-size:2rem; line-height:1.1}
+    .cta p{margin:0 0 18px; font-weight:300}
+
+    form{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+    form .full{grid-column:1/-1}
+    @media (max-width:640px){ form{grid-template-columns:1fr} }
+
+    label{font-size:.85rem; font-weight:600; margin:6px 0 6px; display:block}
+    input{
+      width:100%; padding:14px 14px; border-radius:12px; border:1px solid rgba(0,0,0,.12);
+      outline:none; font-size:1rem; transition:.2s border, .2s box-shadow;
+    }
+    input:focus{border-color:var(--blue); box-shadow:0 0 0 4px rgba(46,163,255,.15)}
+
+    .btn{appearance:none; border:0; border-radius:14px; padding:14px 18px; font-weight:700; font-size:1rem; cursor:pointer}
+    .btn-primary{background:linear-gradient(135deg, var(--green), var(--teal)); color:#03251e}
+    .btn-primary:hover{filter:brightness(1.05)}
+
+    .trust{display:flex; gap:18px; align-items:center; margin-top:14px; flex-wrap:wrap}
+    .pill{font-size:.8rem; border:1px solid rgba(255,255,255,.6); border-radius:999px; padding:8px 12px; background:rgba(255,255,255,.1)}
+
+    footer{margin-top:auto; padding:40px 20px; color:var(--ink-70); font-size:.9rem}
+    .footer-grid{display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap}
+    a{color:inherit}
+    .success{display:none; margin-top:10px; font-weight:600}
+    .success.show{display:block}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="container brand">
+        <!-- Replace logo.png with your actual logo file in the same folder -->
+        <img src="logo.png" alt="Premier Decks &amp; Siding logo" />
+        <div>
+          <h1>Premier Decks &amp; Siding</h1>
+          <div class="tag">Luxury coastal decking &amp; premium siding — North Carolina</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container hero">
+      <div class="deck-band" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="logo-card">
+          <!-- Larger logo hero (optional). If you prefer only the header logo, you can remove this <img>. -->
+          <img src="logo.png" alt="Premier Decks &amp; Siding" />
+        </div>
+
+        <section class="cta" aria-labelledby="cta-title">
+          <h2 id="cta-title">Get your free quote today!</h2>
+          <p>Tell us how to reach you. We’ll follow up with a quick call and a tailored estimate.</p>
+
+          <!-- Formspree-ready: replace ACTION_URL below with your endpoint (e.g., https://formspree.io/f/xxxxxxx) -->
+          <form id="quoteForm" action="#" method="POST" novalidate>
+            <div class="full">
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+            </div>
+            <div>
+              <label for="email">Email Address</label>
+              <input id="email" name="email" type="email" inputmode="email" placeholder="jane@email.com" required />
+            </div>
+            <div>
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" inputmode="tel" placeholder="(555) 123-4567" required pattern="^[0-9()+\-\s]{7,}$" />
+            </div>
+            <div class="full">
+              <button class="btn btn-primary" type="submit">Request Quote</button>
+            </div>
+            <div id="successMsg" class="success">Thanks! Your request has been received. We’ll be in touch shortly.</div>
+          </form>
+
+          <div class="trust" aria-label="assurances">
+            <span class="pill">Licensed &amp; Insured</span>
+            <span class="pill">Premium Materials</span>
+            <span class="pill">Custom Coastal Builds</span>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div>© <span id="year"></span> Premier Decks &amp; Siding. All rights reserved.</div>
+        <div><a href="#">Privacy</a> · <a href="#">Terms</a></div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Lightweight client-side validation + demo success state.
+    // Replace this with your Formspree/EmailJS/etc. endpoint for production.
+    const form = document.getElementById('quoteForm');
+    const success = document.getElementById('successMsg');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      if (!form.reportValidity()) return;
+
+      // Example: send to Formspree or a serverless endpoint
+      // const ENDPOINT = 'https://formspree.io/f/xxxxxxx';
+      // const res = await fetch(ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({
+      //   name: form.name.value, email: form.email.value, phone: form.phone.value
+      // })});
+      // if (res.ok) { success.classList.add('show'); form.reset(); }
+
+      // Demo-only (no backend configured): show success message
+      success.classList.add('show');
+      form.reset();
+    });
+  </script>
+</body>
+</html>
